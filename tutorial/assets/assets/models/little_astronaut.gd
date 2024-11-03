@@ -4,6 +4,7 @@ extends Node3D
 @onready var meshInstance: MeshInstance3D = $Sketchfab_model/astronaut_fbx/Object_2/RootNode/Armature/Object_6/Skeleton3D/Object_9
 @onready var material: StandardMaterial3D = meshInstance.mesh.surface_get_material(0)
 @export var highlight_material: StandardMaterial3D
+@onready var text: Sprite3D = $"../Sprite3D"
 
 func add_highlight() -> void:
 	print("add_highlight called")  # Print to check if this function is called
@@ -15,7 +16,7 @@ func add_highlight() -> void:
 	meshInstance.set_surface_override_material(0, material.duplicate())
 	meshInstance.get_surface_override_material(0).next_pass = highlight_material
 	#meshInstance.set_surface_override_material(0, highlight_material)
-
+	
 func remove_highlight() -> void:
 	print("remove_highlight called")  # Print to check if this function is called
 	meshInstance.set_surface_override_material(0, null)
@@ -34,7 +35,13 @@ func _process(delta: float) -> void:
 func _on_interactable_focused(interactor: Interactor) -> void:
 	print("Focused on interaasctable object")  # Print to check if focusing triggers
 	add_highlight()
+	text.visible = true
 
 func _on_interactable_unfocused(interactor: Interactor) -> void:
 	print("Unfocused from interactable object")  # Print to check if unfocusing triggers
 	remove_highlight()
+	text.visible = false
+
+
+func _on_interactable_interacted(interactor: Interactor) -> void:
+	print("Interacted by Player")

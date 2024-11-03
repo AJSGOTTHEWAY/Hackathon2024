@@ -1,16 +1,18 @@
 extends Area3D
 
 class_name Interactor
-
+const speech = [ " Press [E] TO INTERACT "]
 var controller: Node3D
 
 func interact(interactable: Interactable) -> void:
 	if is_instance_valid(interactable):
 		interactable.interacted.emit(self)
+		
 
 func focus(interactable: Interactable) -> void:
 	if is_instance_valid(interactable):
 		print("Focusing on:", interactable)  # Debug print
+		
 		interactable.emit_signal("focused", self)
 
 func unfocus(interactable: Interactable) -> void:
