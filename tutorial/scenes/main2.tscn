@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dmxh43f6ekqve" path="res://hand raido_hand raido blend_Material_Metallic-hand raido blend_Material_Roughness.png" id="24_3oc4w"]
 [ext_resource type="Texture2D" uid="uid://die6wg04s7og4" path="res://hand raido_hand raido blend_Material_OpenGL_Normal.png" id="25_7a8ae"]
 [ext_resource type="Script" path="res://scenes/toolbox.gd" id="26_p6l1y"]
-[ext_resource type="Material" uid="uid://bohm14p5xenbj" path="res://materials/toolboxcover.tres" id="27_3wxhp"]
+[ext_resource type="Material" path="res://materials/toolboxcover.tres" id="27_3wxhp"]
 
 [sub_resource type="Sky" id="Sky_0i7rc"]
 sky_material = ExtResource("1_7i47m")
@@ -1940,9 +1940,6 @@ radius = 144.0
 height = 1.0
 smooth_faces = false
 
-[node name="Rocket_2" parent="map" instance=ExtResource("9_q6lwd")]
-transform = Transform3D(-1.79036, 0, 6.76717, 0, 7, 0, -6.76717, 0, -1.79036, 69.5448, 7.78625, 6.63184)
-
 [node name="Parkour" type="Node3D" parent="map"]
 
 [node name="ASTROIDS" parent="map/Parkour" instance=ExtResource("15_kqo5i")]
@@ -1965,6 +1962,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8905, 6.23107, 39.1668)
 
 [node name="ASTROIDS6" parent="map/Parkour" instance=ExtResource("15_kqo5i")]
 transform = Transform3D(0.0753964, -0.997154, 0, 0.997154, 0.0753964, 0, 0, 0, 1, -16.8878, 5.75985, 34.8468)
+
+[node name="Rocket_2" parent="." instance=ExtResource("9_q6lwd")]
+transform = Transform3D(-1.79036, 0, 6.76717, 0, 7, 0, -6.76717, 0, -1.79036, 69.5448, 7.78625, 6.63184)
 
 [node name="little_astronaut" type="Node3D" parent="." groups=["cosmo"]]
 transform = Transform3D(3.60627, 0, -1.73055, 0, 4, 0, 1.73055, 0, 3.60627, -22.7212, 0.613667, -10.7544)
