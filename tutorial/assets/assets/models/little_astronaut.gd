@@ -16,7 +16,7 @@ var dialogues = [
 		"Ah, I see. You're not from around here, are you? A duck, of all things, crash-landed on our planet!",
 		"Your ship is in pieces, scattered across the landscape.",
 		"If you want to get back home, you'll need to rebuild it piece by piece.",
-		"I think I saw something shiny over that way. Could be one of your ship's parts.",
+		"I think I saw something shiny over North. Could be one of your ship's parts.",
 		"Good luck, little duck!"
 	],
 	[  # Dialogue after finding the first part
