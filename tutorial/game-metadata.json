@@ -1,0 +1,14 @@
+{
+    "title": "Intergalactic Ducky",
+    "author": "Issac Zhong, Andy Lin, Anthony Maldonado, Syed Rahman",
+    "summary": "Follow a duck's adventure to find a way back home after crash landing on an unknown planet",
+    "release_date": "2024-03-11",
+    "multiplayer": false,
+    "genres": [
+        "Adventure"
+    ],
+    "times_played": 0,
+    "last_played": 0,
+    "cover_image": "./myjit.png",
+    "exec": "./Duck Stranding.arm64"
+}
