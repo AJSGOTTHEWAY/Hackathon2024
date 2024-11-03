@@ -14,12 +14,21 @@ var walking = false
 @onready var camera_point: Node3D = $camera_point
 @onready var animation_player: AnimationPlayer = $visuals/Sketchfab_Scene/AnimationPlayer
 @onready var jump_sound: AudioStreamPlayer = $JumpSoundPlayer
+@onready var quack_sound: AudioStreamPlayer = $QuackSoundPlayer
 
 
 func _ready() -> void:
 	GameManager.set_player(self)
 	animation_player.set_blend_time("idle", "walk", 0.2)
 	animation_player.set_blend_time("walk", "idle", 0.2)
+	
+func _process(delta: float) -> void:
+	# Check if "Q" key is pressed
+		if Input.is_action_just_pressed("quack"):
+			# Play the audio when Q is pressed
+			if quack_sound.playing:
+				quack_sound.stop()  # Stop it if it's already playing to replay the sound
+			quack_sound.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
