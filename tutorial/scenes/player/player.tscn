@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://rqoknmxbsr8j"]
+[gd_scene load_steps=29 format=4 uid="uid://rqoknmxbsr8j"]
 
 [ext_resource type="Script" path="res://scripts/player/duck.gd" id="1_ettrr"]
 
@@ -91,6 +91,9 @@ bind/18/name = &"MarineRLegPlatform_end_014"
 bind/18/bone = -1
 bind/18/pose = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o0o4s"]
+albedo_color = Color(0, 0.603922, 0.92549, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m13nx"]
 resource_name = "Material_75"
 cull_mode = 2
@@ -116,6 +119,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("3vPWv7LpB0GBriFAi8A6QIqwMEGGriFA22BnPnCDVkFRjfFA22BnPnCDVkFRjfFAi8A6QIqwMEGGriFASdVMQHtjmEHLHaBASdVMQHtjmEHLHaBANgwfP81omUEd5fxA22BnPnCDVkFRjfFANgwfP81omUEd5fxASdVMQHtjmEHLHaBA6GH4PwxGt0GXYIhA6GH4PwxGt0GXYIhAlF+nvjRVvUHdbf5ANgwfP81omUEd5fxAlF+nvjRVvUHdbf5A6GH4PwxGt0GXYIhAgvE1P6ru00Gj/UNAgvE1P6ru00Gj/UNAH4l9v6ru00EpQNtAlF+nvjRVvUHdbf5A8zqewAUS8UB/riFA3vPWv7LpB0GBriFA22BnPnCDVkFRjfFA22BnPnCDVkFRjfFA9TqewHCDVkGjWg5B8zqewAUS8UB/riFA9TqewHCDVkGjWg5B22BnPnCDVkFRjfFANgwfP81omUEd5fxANgwfP81omUEd5fxA9TqewO1al0GKBhRB9TqewHCDVkGjWg5B9TqewO1al0GKBhRBNgwfP81omUEd5fxAlF+nvjRVvUHdbf5AlF+nvjRVvUHdbf5A9TqewDRVvUHqyhRB9TqewO1al0GKBhRB9TqewDRVvUHqyhRBlF+nvjRVvUHdbf5AH4l9v6ru00EpQNtAH4l9v6ru00EpQNtA9DqewKru00EnhuJA9TqewDRVvUHqyhRBH4l9v6ru00EpQNtAgvE1P6ru00Gj/UNA9NHvv5UJ3kE5HnNA9NHvv5UJ3kE5HnNAsjUkwCTx3UEoystAH4l9v6ru00EpQNtA9DqewKru00EnhuJAH4l9v6ru00EpQNtAsjUkwCTx3UEoystAsjUkwCTx3UEoystA9DqewDzx3UHrGt9A9DqewKru00EnhuJAd1wDwbLpB0F9riFAeNghwXCDVkFOjfFAFetMwYqwMEF8riFAeNghwXCDVkFOjfFAuCsowc1omUEa5fxARnBRwXtjmEHGHaBARnBRwXtjmEHGHaBAFetMwYqwMEF8riFAeNghwXCDVkFOjfFAuCsowc1omUEa5fxA+P8YwTRVvUHabf5AMEc9wQxGt0GSYIhAMEc9wQxGt0GSYIhARnBRwXtjmEHGHaBAuCsowc1omUEa5fxA+P8YwTRVvUHabf5AYmIOwaru00EmQNtAC5opwaru00Gb/UNAC5opwaru00Gb/UNAMEc9wQxGt0GSYIhA+P8YwTRVvUHabf5A8zqewAUS8UB/riFA9TqewHCDVkGjWg5BeNghwXCDVkFOjfFAeNghwXCDVkFOjfFAd1wDwbLpB0F9riFA8zqewAUS8UB/riFA9TqewHCDVkGjWg5B9TqewO1al0GKBhRBuCsowc1omUEa5fxAuCsowc1omUEa5fxAeNghwXCDVkFOjfFA9TqewHCDVkGjWg5B9TqewO1al0GKBhRB9TqewDRVvUHqyhRB+P8YwTRVvUHabf5A+P8YwTRVvUHabf5AuCsowc1omUEa5fxA9TqewO1al0GKBhRB9TqewDRVvUHqyhRB9DqewKru00EnhuJAYmIOwaru00EmQNtAYmIOwaru00EmQNtA+P8YwTRVvUHabf5A9TqewDRVvUHqyhRBYmIOwaru00EmQNtAD1vqwCTx3UEnystAtEAAwZUJ3kE1HnNAtEAAwZUJ3kE1HnNAC5opwaru00Gb/UNAYmIOwaru00EmQNtA9DqewKru00EnhuJA9DqewDzx3UHrGt9AD1vqwCTx3UEnystAD1vqwCTx3UEnystAYmIOwaru00EmQNtA9DqewKru00EnhuJAi8A6QIqwMEGGriFA8zqewAUS8UB/riFA9TqewDRVvUHqyhRBH4l9v6ru00EpQNtAsjUkwCTx3UEoystAeNghwXCDVkFOjfFAFetMwYqwMEF8riFAeNghwXCDVkFOjfFA9TqewDRVvUHqyhRBYmIOwaru00EmQNtAD1vqwCTx3UEnystAjZ7hSPjh526NnuFI+OHnbo2e4Uj44edu/8P8b/jh527/w/xv+OHnbv/D/G/44eduaL8qeBX9jWJovyp4Ff2NYmi/KngV/Y1iNba7mhX9jWI1truaFf2NYjW2u5oV/Y1iAcjDjo7xYmoByMOOjvFiagHIw46O8WJqRb+BoI7xYmpFv4GgjvFiakW/gaCO8WJq3sQ0nP//1BPexDSc///UE97ENJz//9QTbpHDROPicjFukcNE4+JyMW6Rw0Tj4nIxO47ORP7/wjI7js5E/v/CMjuOzkT+/8Iy6JhseP//PU3omGx4//89TeiYbHj//z1N+Je2eWn7rDH4l7Z5afusMfiXtnlp+6wxCJgBhGn7rDEImAGEafusMQiYAYRp+6wxtJwBf///d060nAF///93TrScAX///3dOXJV7of//iDFclXuh//+IMVyVe6H//4gx/YOTtv//ekP9g5O2//96Q/2Dk7b//3pDlqeixuUZVQCWp6LG5RlVAJanosblGVUAdbAswv///z91sCzC////P3WwLML///8/2YS2pv///z/ZhLam////P9mEtqb///8/QJgoiP///z9AmCiI////P0CYKIj///8/cWHhSAYeF5FxYeFIBh4XkXFh4UgGHheRlkAqeOkCcZ2WQCp46QJxnZZAKnjpAnGd/zv8bwYeF5H/O/xvBh4Xkf87/G8GHheR/TfDjnAOnJX9N8OOcA6clf03w45wDpyVyUm7mukCcZ3JSbua6QJxnclJu5rpAnGdIDs0nAAAKuwgOzScAAAq7CA7NJwAACrsuUCBoHAOnJW5QIGgcA6clblAgaBwDpyVw3HORAAAPM3Dcc5EAAA8zcNxzkQAADzNkG7DRBsdjM6QbsNEGx2MzpBuw0QbHYzOBmi2eZUEUs4GaLZ5lQRSzgZotnmVBFLOFmdseAAAwbIWZ2x4AADBshZnbHgAAMGySmMBfwAAh7FKYwF/AACHsUpjAX8AAIex9mcBhJUEUs72ZwGElQRSzvZnAYSVBFLOAXyTtgAAhLwBfJO2AACEvAF8k7YAAIS8omp7oQAAds6ianuhAAB2zqJqe6EAAHbOiU8swv///z+JTyzC////P4lPLML///8/aFiixhnmqf9oWKLGGeap/2hYosYZ5qn/vmcoiP///z++ZyiI////P75nKIj///8/JXu2pv///z8le7am////PyV7tqb///8/D7YZY/jh524jkk9U4+JyMSGStZX//3dO2YS2puUZVQDZhLam////P9Y/enQGHheRgU+dWwYeF5GqbLhcAAA8zQF8k7YAAIexJXu2pv///z8le7am////Pw==")
 }]
 blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pulg8"]
+albedo_color = Color(0, 0.603922, 0.92549, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sb7w"]
 resource_name = "Material_50"
@@ -167,6 +173,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wtfg"]
+albedo_color = Color(0, 0.603922, 0.92549, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60wyq"]
 resource_name = "Material_37"
 cull_mode = 2
@@ -192,6 +201,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wy5c3"]
+albedo_color = Color(0.933333, 0.419608, 0.168627, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dytf6"]
 resource_name = "Standardmaterial"
 cull_mode = 2
@@ -216,6 +228,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("PmTCP6ru00HX5BRA1iImQDBEtkHCllFArWaEQBsTuUEvpoVA1iImQDBEtkHCllFAfRKCQApVlUE73X5AhSikQPUjmEGsqpJAhSikQPUjmEGsqpJArWaEQBsTuUEvpoVA1iImQDBEtkHCllFAfRKCQApVlUE73X5AiAMOQM7sHkGn8JU/y3xKQKSKJEGuVwRAy3xKQKSKJEGuVwRAhSikQPUjmEGsqpJAfRKCQApVlUE73X5Aeoc2waru00HP5BRASm5gwRsTuUEqpoVAqMNHwTBEtkG4llFAqMNHwTBEtkG4llFASm5gwRsTuUEqpoVANk9wwfUjmEGlqpJANk9wwfUjmEGlqpJAMkRfwQpVlUEv3X5AqMNHwTBEtkG4llFAMkRfwQpVlUEv3X5ANk9wwfUjmEGlqpJAJdpQwaSKJEGkVwRAJdpQwaSKJEGkVwRA1LtBwc7sHkGV8JU/MkRfwQpVlUEv3X5AI1Iehv///z8jUh6G////PyNSHob///8/C1Pcff///z8LU9x9////PwtT3H3///8/YlLUfP///z9iUtR8////P2JS1Hz///8/TUezd////z9NR7N3////P01Hs3f///8/ZFnBcv///z9kWcFy////P2RZwXL///8/260ehv///z/brR6G////P9utHob///8/nK3UfP///z+crdR8////P5yt1Hz///8/86zcff///z/zrNx9////P/Os3H3///8/mqbBcv///z+apsFy////P5qmwXL///8/sbizd////z+xuLN3////P7G4s3f///8/")
 }]
 blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7l13"]
+albedo_color = Color(0, 0.603922, 0.92549, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13h2t"]
 resource_name = "Material_115"
@@ -266,6 +281,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("svwawIhS3kFY5ctA9NHvv5UJ3kE5HnNAsHblvwjc5UG7bG5AsHblvwjc5UG7bG5AJMQYwFuC5UFSo8pAsvwawIhS3kFY5ctAsHblvwjc5UG7bG5A9NHvv5UJ3kE5HnNAGzorwBAI4EGJsPE/GzorwBAI4EGJsPE/fn4fwOw66EGHhgFAsHblvwjc5UG7bG5AGzorwBAI4EGJsPE/8jqewEvr3UHOc5w/8jqewOHN5UF21KM/8jqewOHN5UF21KM/fn4fwOw66EGHhgFAGzorwBAI4EGJsPE/svwawIhS3kFY5ctAJMQYwFuC5UFSo8pA9DqewJmc5UGn+95A9DqewDzx3UHrGt9AsvwawIhS3kFY5ctA9DqewJmc5UGn+95A9DqewOPG4UGbC99A9DqewDzx3UHrGt9A9DqewJmc5UGn+95Aj/fuwIhS3kFX5ctA1hPwwFuC5UFRo8pAHYwBwQjc5UG3bG5AHYwBwQjc5UG3bG5AtEAAwZUJ3kE1HnNAj/fuwIhS3kFX5ctAHYwBwQjc5UG3bG5AprbswOw66EGDhgFA19jmwBAI4EGDsPE/19jmwBAI4EGDsPE/tEAAwZUJ3kE1HnNAHYwBwQjc5UG3bG5A19jmwBAI4EGDsPE/prbswOw66EGDhgFA8jqewOHN5UF21KM/8jqewOHN5UF21KM/8jqewEvr3UHOc5w/19jmwBAI4EGDsPE/9DqewJmc5UGn+95A1hPwwFuC5UFRo8pAj/fuwIhS3kFX5ctA9DqewJmc5UGn+95Aj/fuwIhS3kFX5ctA9DqewDzx3UHrGt9A8uNUef///z/y41R5////P/LjVHn///8/5eUTff///z/l5RN9////P+XlE33///8/ePaSUv///7949pJS////v3j2klL///+/+fVfUv///7/59V9S////v/n1X1L///+/bvq45P///79u+rjk////v276uOT///+/jfil5P///7+N+KXk////v434peT///+/0Jhng////z/QmGeD////P9CYZ4P///8/g5hogP///z+DmGiA////P4OYaID///8//v//f////z/+//9/////P/7//3////8/GRoTff///z8ZGhN9////PxkaE33///8/DBxUef///z8MHFR5////PwwcVHn///8/BQpfUv///78FCl9S////vwUKX1L///+/hgmSUv///7+GCZJS////v4YJklL///+/cQel5P///79xB6Xk////v3EHpeT///+/kAW45P///7+QBbjk////v5AFuOT///+/Lmdng////z8uZ2eD////Py5nZ4P///8/e2dogP///z97Z2iA////P3tnaID///8/")
 }]
 blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ko8n"]
+albedo_color = Color(6.73831e-06, 0.604068, 0.92693, 1)
 
 [sub_resource type="Animation" id="Animation_7bpkq"]
 resource_name = "idle"
@@ -673,10 +691,13 @@ bones/18/scale = Vector3(1, 1, 1)
 [node name="Object_26" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_hmuaw")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_o0o4s")
 
 [node name="Object_27" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
+transform = Transform3D(0.999986, 0.00523596, 0, -0.00523596, 0.999986, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7isd4")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_pulg8")
 
 [node name="Object_28" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_0d0lc")
@@ -685,14 +706,17 @@ skin = SubResource("Skin_khelh")
 [node name="Object_29" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_koxay")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_8wtfg")
 
 [node name="Object_30" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_7tdfw")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_wy5c3")
 
 [node name="Object_31" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_rfps7")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_p7l13")
 
 [node name="Object_32" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_k6rw8")
@@ -701,6 +725,7 @@ skin = SubResource("Skin_khelh")
 [node name="Object_33" type="MeshInstance3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5/Skeleton3D"]
 mesh = SubResource("ArrayMesh_xldng")
 skin = SubResource("Skin_khelh")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ko8n")
 
 [node name="Object_25" type="Node3D" parent="visuals/Sketchfab_Scene/Sketchfab_model/c03cce1450874a9b8d3100814bff55e2_fbx/Object_2/RootNode/Armature/Object_5"]
 transform = Transform3D(1.50523e-08, -0.1, 6.98502e-11, 0, 6.98502e-11, 0.1, -0.1, -1.50523e-08, 1.0514e-17, -0.494469, 0.222222, -0.253115)
