@@ -11,28 +11,30 @@ extends Node3D
 
 # Different dialogue sequences based on part count
 var dialogues = [
-	[  # Initial dialogue
+	[  # Initial dialogue before finding any parts
 		"Oh, hello there, stranger! You look a bit... ruffled.",
 		"Ah, I see. You're not from around here, are you? A duck, of all things, crash-landed on our planet!",
 		"Your ship is in pieces, scattered across the landscape.",
 		"If you want to get back home, you'll need to rebuild it piece by piece.",
-		"I think I saw something shiny over North. Could be one of your ship's parts.",
-		"Good luck, little duck!"
+		"I think I saw something shiny along the asteroids Southwest from here. Could be one of your ship's parts—a Radio, maybe.",
+		"Once you've found it, come back and let me know. Good luck, little duck!"
 	],
-	[  # Dialogue after finding the first part
-		"Ah, you found one of your ship's parts! Excellent work.",
+	[  # Dialogue after finding the first part (Radio)
+		"Ah, you found the Radio! Excellent work—you're one step closer.",
 		"But you'll need more if you want to get that thing flying again.",
-		"I thought I saw another piece near the old ruins up the hill.",
-		"Head that way, and be careful! The terrain gets a bit rough."
+		"I thought I saw another piece—a Fuel Can—near the end of the old maze up towards the East.",
+		"Head that way, and watch out! The maze can be a bit tricky to navigate.",
+		"Bring the Fuel Can back here once you’ve found it, and I’ll help you find the next part."
 	],
-	[  # Dialogue after finding the second part
-		"You're back! I see you have another part in hand—fantastic!",
-		"You're making progress, but there's still work to do.",
-		"The last piece I saw was down by the river. Search along the banks to find it.",
-		"Once you get that, you should have everything you need to rebuild your ship."
+	[  # Dialogue after finding the second part (Fuel Can)
+		"You're back! I see you found the Fuel Can—fantastic!",
+		"You're making real progress, but there’s still work to do.",
+		"I think I have the last piece you need—a Toolbox—somewhere nearby.",
+		"Take a look around here and see if you can find it!",
+		"Once you’ve got the Toolbox, come back, and we’ll see if you have everything you need."
 	],
-	[  # Dialogue after finding the third (final) part
-		"Well, would you look at that! You've found all the pieces of your ship!",
+	[  # Dialogue after finding the third (final) part (Toolbox)
+		"Well, would you look at that! You’ve found the Toolbox—along with all the pieces of your ship!",
 		"I knew you could do it, little duck. Now, all that's left is for you to put it back together.",
 		"Best of luck on your journey back home. It was a pleasure meeting you!"
 	]

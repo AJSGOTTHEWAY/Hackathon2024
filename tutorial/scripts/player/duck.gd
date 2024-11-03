@@ -15,6 +15,8 @@ var walking = false
 @onready var animation_player: AnimationPlayer = $visuals/Sketchfab_Scene/AnimationPlayer
 @onready var jump_sound: AudioStreamPlayer = $JumpSoundPlayer
 @onready var quack_sound: AudioStreamPlayer = $QuackSoundPlayer
+@onready var ui_layer: CanvasLayer = $"../UiLayer"
+@onready var quack_sound2: AudioStreamPlayer = $QuackSoundPlayer2
 
 
 func _ready() -> void:
@@ -26,9 +28,14 @@ func _process(delta: float) -> void:
 	# Check if "Q" key is pressed
 		if Input.is_action_just_pressed("quack"):
 			# Play the audio when Q is pressed
+			ui_layer.quack()
 			if quack_sound.playing:
 				quack_sound.stop()  # Stop it if it's already playing to replay the sound
-			quack_sound.play()
+			if ui_layer.quackCount % 15 == 0:
+				quack_sound2.play()
+			else:
+				quack_sound.play()
+				
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

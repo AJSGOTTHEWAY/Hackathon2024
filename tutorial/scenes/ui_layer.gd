@@ -8,20 +8,30 @@ extends CanvasLayer
 @onready var radio: TextureRect = $UI/Radio
 @onready var toolbox: TextureRect = $UI/Toolbox
 @onready var finish: TextureRect = $UI/Finish
+@onready var black_screen: ColorRect = $UI/BlackScreen
+@onready var duck: TextureRect = $UI/Duck
+@onready var quacks: Label = $UI/Quacks
+
 
 var talking: bool = false
 var dialogue_lines: Array = []  # Array to store dialogue lines
 var current_line: int = 0  # Track the current line index
 var partCount = 0
 
+var quackCount = 0
+
 func _ready() -> void:
 	ui.visible = true  # Initially hide the dialogue box
 	panel.visible = false
 	partCount = 0
+	quackCount = 0
+	quacks.text = "Quacks: 0"
 	
 
 func finished() -> void:
 	finish.visible = true
+	black_screen.visible = true
+	duck.visible = true
 
 func gotFuel() -> void:
 	fuel_can.visible = true
@@ -34,6 +44,10 @@ func gotTools() -> void:
 func gotRadio() -> void:
 	radio.visible = true
 	partCount+=1
+	
+func quack() -> void:
+	quackCount+=1
+	quacks.text = "Quacks: " + str(quackCount)
 
 # Function to start dialogue
 func start_dialogue(lines: Array, speaker_name: String = "") -> void:
