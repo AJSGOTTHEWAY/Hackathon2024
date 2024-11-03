@@ -7,6 +7,7 @@ extends CanvasLayer
 @onready var fuel_can: TextureRect = $"UI/Fuel Can"
 @onready var radio: TextureRect = $UI/Radio
 @onready var toolbox: TextureRect = $UI/Toolbox
+@onready var finish: TextureRect = $UI/Finish
 
 var talking: bool = false
 var dialogue_lines: Array = []  # Array to store dialogue lines
@@ -18,6 +19,9 @@ func _ready() -> void:
 	panel.visible = false
 	partCount = 0
 	
+
+func finished() -> void:
+	finish.visible = true
 
 func gotFuel() -> void:
 	fuel_can.visible = true

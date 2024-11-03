@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=4 uid="uid://rqoknmxbsr8j"]
+[gd_scene load_steps=33 format=4 uid="uid://rqoknmxbsr8j"]
 
 [ext_resource type="Script" path="res://scripts/player/duck.gd" id="1_ettrr"]
 [ext_resource type="PackedScene" uid="uid://dnt3ej03ydn6p" path="res://interaction/PlayerInteractor.tscn" id="2_3qx22"]
 [ext_resource type="AudioStream" uid="uid://l2pw8cwduoii" path="res://assets/assets/music/cartoon-jump-6462.mp3" id="3_av4su"]
+[ext_resource type="AudioStream" uid="uid://djoak7pchvycc" path="res://assets/assets/music/quack_5.mp3" id="4_lssx3"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_q3rah"]
 
@@ -757,7 +758,7 @@ libraries = {
 }
 
 [node name="camera_point" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.756858, 0.653579, 0, -0.653579, 0.756858, 0, 7.59639, 6.68767)
+transform = Transform3D(1, 0, 0, 0, 0.756858, 0.653579, 0, -0.653579, 0.756858, 0, 13.5964, 17.6877)
 
 [node name="PlayerInteractor" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_3qx22")]
 collision_layer = 1
@@ -770,5 +771,8 @@ shape = SubResource("BoxShape3D_ihlag")
 
 [node name="JumpSoundPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_av4su")
+
+[node name="QuackSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lssx3")
 
 [editable path="PlayerInteractor"]
