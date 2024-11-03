@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://15f0m3nm3g23"]
+[gd_scene load_steps=7 format=3 uid="uid://15f0m3nm3g23"]
 
 [ext_resource type="Script" path="res://scenes/ui_layer.gd" id="1_2hfvr"]
-[ext_resource type="FontFile" path="res://fonts/fonts/architect-s-daughter/ArchitectsDaughter32.tres" id="2_8onfu"]
+[ext_resource type="FontFile" uid="uid://cnjpx50biiv0t" path="res://fonts/fonts/architect-s-daughter/ArchitectsDaughter32.tres" id="2_8onfu"]
+[ext_resource type="Texture2D" uid="uid://mg57ejdjtveu" path="res://assets/assets/textures/image-removebg-preview (2).png" id="3_x4xv8"]
+[ext_resource type="Texture2D" uid="uid://b4q8vtp6sqqqi" path="res://assets/assets/textures/jerrycan.png" id="4_hhml3"]
+[ext_resource type="Texture2D" uid="uid://bk7nrdky12px0" path="res://assets/assets/textures/pocket-radio.png" id="5_6m6mo"]
+[ext_resource type="Texture2D" uid="uid://48dn3mwkxxg8" path="res://assets/assets/textures/toolbox (1).png" id="6_nsqvk"]
 
 [node name="UiLayer" type="CanvasLayer"]
 script = ExtResource("1_2hfvr")
 
-[node name="Dialogue Box" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Dialogue Box"]
+[node name="Panel" type="Panel" parent="UI"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
@@ -26,7 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Dialogue Text" type="Label" parent="Dialogue Box/Panel"]
+[node name="Dialogue Text" type="Label" parent="UI/Panel"]
 layout_mode = 0
 offset_left = 0.799995
 offset_top = 51.6
@@ -36,10 +40,53 @@ theme_override_fonts/font = ExtResource("2_8onfu")
 theme_override_font_sizes/font_size = 30
 vertical_alignment = 1
 
-[node name="Name Label" type="Label" parent="Dialogue Box/Panel"]
+[node name="Name Label" type="Label" parent="UI/Panel"]
 layout_mode = 0
 offset_right = 100.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("2_8onfu")
 theme_override_font_sizes/font_size = 50
 text = "Cosmo"
+
+[node name="Compass Icon" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -465.0
+offset_top = 57.0
+offset_right = -62.0
+offset_bottom = 416.0
+grow_horizontal = 0
+texture = ExtResource("3_x4xv8")
+expand_mode = 1
+
+[node name="Fuel Can" type="TextureRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 150.0
+offset_bottom = 140.0
+texture = ExtResource("4_hhml3")
+expand_mode = 1
+
+[node name="Radio" type="TextureRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 260.0
+texture = ExtResource("5_6m6mo")
+expand_mode = 1
+
+[node name="Toolbox" type="TextureRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 280.0
+offset_right = 150.0
+offset_bottom = 380.0
+texture = ExtResource("6_nsqvk")
+expand_mode = 1

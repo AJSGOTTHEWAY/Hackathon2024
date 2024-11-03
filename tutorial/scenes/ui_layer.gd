@@ -1,21 +1,23 @@
 extends CanvasLayer
 
-@onready var dialogue_text: Label = $"Dialogue Box/Panel/Dialogue Text"
-@onready var dialogue_box: Control = $"Dialogue Box"
-@onready var name_label: Label = $"Dialogue Box/Panel/Name Label"
+@onready var dialogue_text: Label = $"UI/Panel/Dialogue Text"
+@onready var name_label: Label = $"UI/Panel/Name Label"
+@onready var panel: Panel = $"UI/Panel"
+@onready var ui: Control = $UI
 
 var talking: bool = false
 var dialogue_lines: Array = []  # Array to store dialogue lines
 var current_line: int = 0  # Track the current line index
 
 func _ready() -> void:
-	dialogue_box.visible = false  # Initially hide the dialogue box
+	ui.visible = true  # Initially hide the dialogue box
+	panel.visible = false
 
 # Function to start dialogue
 func start_dialogue(lines: Array, speaker_name: String = "") -> void:
 	dialogue_lines = lines.duplicate()
 	current_line = 0
-	dialogue_box.visible = true  # Show the dialogue box
+	panel.visible = true  # Show the dialogue box
 	name_label.text = speaker_name  # Set the speaker's name if provided
 	talking = true
 	display_line()
@@ -34,11 +36,11 @@ func next_line() -> void:
 
 # Function to end dialogue
 func end_dialogue() -> void:
-	dialogue_box.visible = false  # Hide the dialogue box
+	panel.visible = false  # Hide the dialogue box
 	talking = false
 	dialogue_lines.clear()
 
 # Function to handle input for advancing dialogue
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept") and dialogue_box.visible:
+	if event.is_action_pressed("ui_accept") and panel.visible:
 		next_line()

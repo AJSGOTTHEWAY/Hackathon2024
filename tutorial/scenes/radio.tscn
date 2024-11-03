@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dau81l24t0lo3"]
+
+[ext_resource type="PackedScene" uid="uid://bj4x1okrcd8mh" path="res://assets/assets/models/pickups/hand-radio/source/hand raido.glb" id="1_dd63v"]
+
+[node name="hand raido" instance=ExtResource("1_dd63v")]
