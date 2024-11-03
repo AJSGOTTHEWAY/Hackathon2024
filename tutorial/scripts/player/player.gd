@@ -3,7 +3,6 @@ extends CharacterBody3D
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
-var
 
 var walking = false
 @onready var player: CharacterBody3D = $"."
