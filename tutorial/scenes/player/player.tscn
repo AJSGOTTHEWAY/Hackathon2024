@@ -757,7 +757,7 @@ libraries = {
 }
 
 [node name="camera_point" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.900227, 0.43542, 0, -0.43542, 0.900227, 0, 14.5964, 16.6877)
+transform = Transform3D(1, 0, 0, 0, 0.756858, 0.653579, 0, -0.653579, 0.756858, 0, 7.59639, 6.68767)
 
 [node name="PlayerInteractor" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_3qx22")]
 collision_layer = 1
