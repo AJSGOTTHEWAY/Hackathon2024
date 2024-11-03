@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 GameManager="*res://scripts/globals/game_manager.gd"
 Highlight="*res://scripts/globals/highlight.gd"
 
+[display]
+
+window/size/mode=3
+
 [dotnet]
 
 project/assembly_name="Tutorial"
