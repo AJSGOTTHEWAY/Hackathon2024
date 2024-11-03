@@ -24,6 +24,10 @@ Highlight="*res://scripts/globals/highlight.gd"
 
 project/assembly_name="Tutorial"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 forward={
