@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c6dmvt23ayf14"]
+[gd_scene load_steps=21 format=3 uid="uid://c6dmvt23ayf14"]
 
 [ext_resource type="Material" uid="uid://cd3nc35d5un2v" path="res://materials/new_panorama_sky_material.tres" id="1_7i47m"]
 [ext_resource type="Material" uid="uid://cohdb63xv3636" path="res://materials/wall_material.tres" id="1_jrlem"]
@@ -10,11 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://rqoknmxbsr8j" path="res://scenes/player/player.tscn" id="6_xv63y"]
 [ext_resource type="PackedScene" uid="uid://cpnbiuq4fb0e2" path="res://assets/assets/models/pickups/worn_jerrycan_glb.glb" id="7_5oaw7"]
 [ext_resource type="PackedScene" uid="uid://c57q15chwj64c" path="res://scenes/player/camera_rig.tscn" id="7_ndo5t"]
-[ext_resource type="Material" uid="uid://dmmcq26eqdrwy" path="res://materials/entrance.tres" id="8_805av"]
+[ext_resource type="Script" path="res://scenes/cielinghider.gd" id="8_rgmw2"]
 [ext_resource type="AudioStream" uid="uid://bv2jryl0vok2t" path="res://assets/assets/music/Smooth Sailing.mp3" id="8_wyhif"]
 [ext_resource type="PackedScene" uid="uid://bj4x1okrcd8mh" path="res://assets/assets/models/pickups/hand-radio/source/hand raido.glb" id="8_yxmnl"]
 [ext_resource type="PackedScene" uid="uid://dnpf1pxhf0i7t" path="res://assets/assets/models/Space Rocket/Mesh/Rocket_2.fbx" id="9_q6lwd"]
 [ext_resource type="PackedScene" uid="uid://c13b7rvbehyug" path="res://assets/assets/models/pickups/helipad (1).glb" id="10_edgcl"]
+[ext_resource type="Script" path="res://scenes/wallscript.gd" id="10_yooaj"]
 [ext_resource type="PackedScene" uid="uid://c6gtcsj451tf8" path="res://assets/assets/models/toolbox.glb" id="14_a6toj"]
 [ext_resource type="PackedScene" uid="uid://7lhjik088a7b" path="res://assets/assets/models/spaceassests2.0/FBX/ASTROIDS.fbx" id="15_kqo5i"]
 
@@ -35,7 +36,7 @@ environment = SubResource("Environment_jrbqr")
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(-0.715906, 0.648127, 0.259636, 0.522011, 0.249915, 0.815504, 0.463663, 0.719357, -0.517245, 474, 499.723, -88.1953)
 light_color = Color(1, 0.959318, 0.997993, 1)
-light_energy = 10.0
+light_energy = 4.0
 directional_shadow_mode = 1
 
 [node name="map" type="Node3D" parent="."]
@@ -132,8 +133,7 @@ size = Vector3(11.5085, 7.60828, 110)
 
 [node name="wall26" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.114944, 0, 0.0030099, 0, 0.517424, 0, -0.0030099, 0, 0.114944, -37.1788, 2.71269, -12.2874)
-material_override = ExtResource("4_wh1xw")
-use_collision = true
+material_override = ExtResource("5_ycdet")
 size = Vector3(11.5085, 7.60828, 110)
 script = ExtResource("2_b3ih5")
 
@@ -153,15 +153,13 @@ script = ExtResource("2_b3ih5")
 
 [node name="wall29" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.00300989, 0, -0.114944, 0, 0.517424, 0, 0.114944, 0, 0.00300989, -22.1505, 2.71269, 1.94093)
-material_override = ExtResource("4_wh1xw")
-use_collision = true
+material_override = ExtResource("5_ycdet")
 size = Vector3(11.5085, 7.60828, 110)
 script = ExtResource("2_b3ih5")
 
 [node name="wall30" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.00300989, 0, -0.114944, 0, 0.517424, 0, 0.114944, 0, 0.00300989, -22.9505, 2.71269, -27.3157)
-material_override = ExtResource("4_wh1xw")
-use_collision = true
+material_override = ExtResource("5_ycdet")
 size = Vector3(11.5085, 7.60828, 110)
 script = ExtResource("2_b3ih5")
 
@@ -195,64 +193,207 @@ radius = 144.0
 height = 1.0
 smooth_faces = false
 
+[node name="AbandonedStation2" type="CSGCylinder3D" parent="map"]
+transform = Transform3D(-0.0675851, 0, -0.0930232, 0, 0.114983, 0, 0.0930232, 0, -0.0675851, 19.372, 5.268, -61.87)
+material_override = ExtResource("4_myvam")
+use_collision = true
+radius = 144.0
+height = 1.0
+smooth_faces = false
+script = ExtResource("8_rgmw2")
+
 [node name="wall20" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.0980395, 0, -0.0600787, 0, 0.517424, 0, 0.0600787, 0, -0.0980395, 6.95506, 3.17312, -54.2332)
-material_override = ExtResource("8_805av")
+material_override = ExtResource("5_ycdet")
 size = Vector3(11.5085, 7.60828, 110)
+script = ExtResource("10_yooaj")
 
 [node name="wall33" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.0980395, 0, -0.0600787, 0, 0.517424, 0, 0.0600787, 0, -0.0980395, 31.892, 3.17312, -69.5544)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall34" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.111806, 0, 0.0268423, 0, 0.517424, 0, -0.0268423, 0, -0.111806, 5.19017, 3.17312, -65.2935)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall35" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.111806, 0, 0.0268423, 0, 0.517424, 0, -0.0268423, 0, -0.111806, 33.6569, 3.17312, -58.4941)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall36" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.0600787, 0, 0.0980395, 0, 0.517424, 0, -0.0980395, 0, -0.0600787, 11.763, 3.17312, -74.3623)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall37" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.0600787, 0, 0.0980395, 0, 0.517424, 0, -0.0980395, 0, -0.0600787, 27.0841, 3.17312, -49.4253)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall38" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.0268423, 0, 0.111806, 0, 0.517424, 0, -0.111806, 0, 0.0268423, 22.8232, 3.17312, -76.1272)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
 
 [node name="wall39" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.0268423, 0, 0.111806, 0, 0.517424, 0, -0.111806, 0, 0.0268423, 16.0238, 3.17312, -47.6604)
 material_override = ExtResource("4_wh1xw")
 use_collision = true
 size = Vector3(11.5085, 7.60828, 110)
-script = ExtResource("2_b3ih5")
+script = ExtResource("10_yooaj")
+
+[node name="wall41" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0600784, 0, 0.0980392, 0, 0.517424, 0, -0.0980392, 0, -0.0600784, 14.9012, 3.19385, -52.5828)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(6.26939, 7.60828, 110)
+script = ExtResource("10_yooaj")
+
+[node name="wall44" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0600784, 0, 0.0980392, 0, 0.517424, 0, -0.0980392, 0, -0.0600784, 13.9012, 3.19385, -54.5828)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(6.26939, 7.60828, 110)
+script = ExtResource("10_yooaj")
+
+[node name="wall42" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0661819, 0, 0.0619253, 0, 0.517424, 0, -0.0628043, 0, -0.0652556, 19.0238, 3.17312, -51.0161)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 110)
+script = ExtResource("10_yooaj")
+
+[node name="wall43" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0661819, 0, 0.0619253, 0, 0.517424, 0, -0.0628043, 0, -0.0652556, 23.9692, 3.14894, -56.2126)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 57.674)
+script = ExtResource("10_yooaj")
+
+[node name="wall45" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0661819, 0, 0.0619253, 0, 0.517424, 0, -0.0628043, 0, -0.0652556, 26.7512, 3.14894, -59.2126)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 57.674)
+script = ExtResource("10_yooaj")
+
+[node name="wall47" type="CSGBox3D" parent="map"]
+transform = Transform3D(0.0784799, 0, 0.0458818, 0, 0.517424, 0, -0.0465331, 0, 0.0773815, 8.8088, 3.15917, -51.1291)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 57.674)
+script = ExtResource("10_yooaj")
+
+[node name="wall46" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0628043, 0, -0.0652556, 0, 0.517424, 0, 0.0661819, 0, -0.0619253, 31.9751, 3.14894, -65.1021)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 67.8473)
+script = ExtResource("10_yooaj")
+
+[node name="wall51" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0628043, 0, -0.0652556, 0, 0.517424, 0, 0.0661819, 0, -0.0619253, 27.9751, 3.14894, -69.1021)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 67.8473)
+script = ExtResource("10_yooaj")
+
+[node name="wall50" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.00556999, 0, -0.0897935, 0, 0.517424, 0, 0.0910681, 0, -0.00549204, 26.3751, 3.14894, -68.1021)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 67.8473)
+script = ExtResource("10_yooaj")
+
+[node name="wall48" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0628043, 0, -0.0652556, 0, 0.517424, 0, 0.0661819, 0, -0.0619253, 29.0737, 3.14894, -59.8555)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 36.9092)
+script = ExtResource("10_yooaj")
+
+[node name="wall49" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0435352, 0, -0.0790595, 0, 0.517424, 0, 0.0801817, 0, -0.0429258, 25.2394, 3.14894, -62.4685)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 87)
+script = ExtResource("10_yooaj")
+
+[node name="wall52" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0435352, 0, -0.0790595, 0, 0.517424, 0, 0.0801817, 0, -0.0429258, 19.2394, 3.14894, -65.7685)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 87)
+script = ExtResource("10_yooaj")
+
+[node name="wall53" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0435352, 0, -0.0790595, 0, 0.517424, 0, 0.0801817, 0, -0.0429258, 14.2394, 3.14894, -68.4685)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 87)
+script = ExtResource("10_yooaj")
+
+[node name="wall58" type="CSGBox3D" parent="map"]
+transform = Transform3D(0.025913, 0, -0.0862566, 0, 0.517424, 0, 0.087481, 0, 0.0255504, 14.467, 3.14894, -70.0324)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 52.8604)
+script = ExtResource("10_yooaj")
+
+[node name="wall59" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0777934, 0, -0.0470046, 0, 0.517424, 0, 0.0476718, 0, -0.0767046, 18.1048, 3.14894, -73.9915)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 80)
+script = ExtResource("10_yooaj")
+
+[node name="wall54" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0459075, 0.0378878, -0.0774643, 0.0119688, 0.512937, 0.000687795, 0.0779337, -0.0564571, -0.0457366, 15.2394, 3.14894, -59.5685)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 87)
+script = ExtResource("10_yooaj")
+
+[node name="wall55" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0459075, 0.0378878, -0.0774643, 0.0119688, 0.512937, 0.000687795, 0.0779337, -0.0564571, -0.0457366, 11.2394, 3.14894, -61.9685)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 87)
+script = ExtResource("10_yooaj")
+
+[node name="wall56" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.0779337, 0.0564571, 0.0457366, 0.0119688, 0.512937, 0.000687795, -0.0459075, 0.0378878, -0.0774643, 10.9712, 3.15995, -60.208)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 55)
+script = ExtResource("10_yooaj")
+
+[node name="wall57" type="CSGBox3D" parent="map"]
+transform = Transform3D(0.0459075, -0.0378878, 0.0774643, 0.0119688, 0.512937, 0.000687796, -0.0779337, 0.0564571, 0.0457366, 8.68101, 3.1627, -59.025)
+material_override = ExtResource("4_wh1xw")
+use_collision = true
+size = Vector3(11.5085, 7.60828, 47)
+script = ExtResource("10_yooaj")
 
 [node name="CollectableObject" type="Node3D" parent="map"]
 
 [node name="worn_jerrycan_glb" parent="map/CollectableObject" instance=ExtResource("7_5oaw7")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.7458, 1.3, -56.8149)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 30.7458, 1.3, -68.6316)
 
 [node name="Rocket_2" parent="map" instance=ExtResource("9_q6lwd")]
 transform = Transform3D(-1.79036, 0, 6.76717, 0, 7, 0, -6.76717, 0, -1.79036, 69.5448, 7.78625, 6.63184)
