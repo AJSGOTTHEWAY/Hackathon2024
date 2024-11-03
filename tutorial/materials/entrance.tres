@@ -1,5 +1,11 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmmcq26eqdrwy"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dmmcq26eqdrwy"]
+
+[ext_resource type="Texture2D" uid="uid://j46q2hbf6cyp" path="res://materials/Ground054_1K-PNG/Ground054_1K-PNG_Color.png" id="1_cq1ou"]
 
 [resource]
-transparency = 1
-albedo_color = Color(0.945098, 0.443137, 0.827451, 0.709804)
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+blend_mode = 1
+albedo_color = Color(0.467347, 0.618871, 0.985016, 1)
+albedo_texture = ExtResource("1_cq1ou")
