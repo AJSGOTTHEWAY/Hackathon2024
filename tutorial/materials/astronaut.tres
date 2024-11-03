@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://swvkck6acxy8"]
+
+[ext_resource type="Texture2D" uid="uid://de2y2c8mtoq7q" path="res://assets/assets/models/little-astronaut_0.png" id="1_g8m0m"]
+
+[resource]
+albedo_texture = ExtResource("1_g8m0m")
