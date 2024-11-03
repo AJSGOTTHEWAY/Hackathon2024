@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dfa4752g5k8bh"]
+[gd_scene load_steps=27 format=4 uid="uid://dfa4752g5k8bh"]
 
 [ext_resource type="Material" uid="uid://7cmfm3gfgdew" path="res://materials/floor_material.tres" id="1_afohb"]
 [ext_resource type="Material" uid="uid://cohdb63xv3636" path="res://materials/wall_material.tres" id="2_ryhpm"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bwmime2ochkkx" path="res://interaction/Interactable.tscn" id="7_ajc3j"]
 [ext_resource type="Material" uid="uid://bjtqdjip4kg41" path="res://materials/outline.tres" id="7_f6i8e"]
 [ext_resource type="Material" uid="uid://swvkck6acxy8" path="res://materials/astronaut.tres" id="8_3tt3l"]
+[ext_resource type="Script" path="res://scenes/sub_viewport.gd" id="11_n70fr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kiy"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1384,6 +1385,9 @@ _data = {
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rvjvs"]
 radius = 1.935
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_xf2em"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
 [node name="world" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -1737,6 +1741,25 @@ collision_mask = 1
 [node name="CollisionShape3D" parent="little_astronaut/Interactable" index="0"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.857752, 0)
 shape = SubResource("CylinderShape3D_rvjvs")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.948096, 0, -0.317983, 0, 1, 0, 0.317983, 0, 0.948096, -6.176, 2.02168, 5.984)
+visible = false
+billboard = 1
+texture = SubResource("ViewportTexture_xf2em")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+transparent_bg = true
+size = Vector2i(333, 80)
+script = ExtResource("11_n70fr")
+
+[node name="Label" type="Label" parent="Sprite3D/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "				[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 3
 
 [connection signal="focused" from="little_astronaut/Interactable" to="little_astronaut" method="_on_interactable_focused"]
 [connection signal="interacted" from="little_astronaut/Interactable" to="little_astronaut" method="_on_interactable_interacted"]
