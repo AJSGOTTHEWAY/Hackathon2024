@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=7 format=3 uid="uid://15f0m3nm3g23"]
 
 [ext_resource type="Script" path="res://scenes/ui_layer.gd" id="1_2hfvr"]
@@ -6,6 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://b4q8vtp6sqqqi" path="res://assets/assets/textures/jerrycan.png" id="4_hhml3"]
 [ext_resource type="Texture2D" uid="uid://bk7nrdky12px0" path="res://assets/assets/textures/pocket-radio.png" id="5_6m6mo"]
 [ext_resource type="Texture2D" uid="uid://48dn3mwkxxg8" path="res://assets/assets/textures/toolbox (1).png" id="6_nsqvk"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://qv3rj6iwqw0s"]
+
+[ext_resource type="Script" path="res://scenes/ui_layer.gd" id="1_2hfvr"]
+[ext_resource type="FontFile" uid="uid://cnjpx50biiv0t" path="res://fonts/fonts/architect-s-daughter/ArchitectsDaughter32.tres" id="2_8onfu"]
+>>>>>>> Stashed changes
 
 [node name="UiLayer" type="CanvasLayer"]
 script = ExtResource("1_2hfvr")
