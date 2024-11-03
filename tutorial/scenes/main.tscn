@@ -1384,7 +1384,7 @@ _data = {
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rvjvs"]
 radius = 1.935
 
-[node name="world" type="Node3D"]
+[node name="world2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jrbqr")

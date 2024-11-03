@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuhspmbifdbu8"]
+
+[ext_resource type="PackedScene" uid="uid://cpnbiuq4fb0e2" path="res://assets/assets/models/pickups/worn_jerrycan_glb.glb" id="1_g407b"]
+
+[node name="worn_jerrycan_glb" instance=ExtResource("1_g407b")]

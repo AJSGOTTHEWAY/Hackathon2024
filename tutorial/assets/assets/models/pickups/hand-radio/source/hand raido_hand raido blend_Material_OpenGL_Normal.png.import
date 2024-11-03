@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://jplb6dj8khac"
+path.s3tc="res://.godot/imported/hand raido_hand raido blend_Material_OpenGL_Normal.png-046320ac0b40c6a38399414a445c5628.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "099ad24d2a643c7d4e942d669a041aa6"
+}
+
+[deps]
+
+source_file="res://assets/assets/models/pickups/hand-radio/source/hand raido_hand raido blend_Material_OpenGL_Normal.png"
+dest_files=["res://.godot/imported/hand raido_hand raido blend_Material_OpenGL_Normal.png-046320ac0b40c6a38399414a445c5628.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/assets/models/pickups/hand-radio/source/hand raido_hand raido blend_Material_OpenGL_Normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
