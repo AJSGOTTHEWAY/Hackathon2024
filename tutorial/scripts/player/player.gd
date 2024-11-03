@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
+const SPRINT_SPEED = 6.0
 
 var walking = false
 @onready var player: CharacterBody3D = $"."
@@ -24,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	var speed = SPRINT_SPEED if Input.is_action_pressed("sprint") else SPEED
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
