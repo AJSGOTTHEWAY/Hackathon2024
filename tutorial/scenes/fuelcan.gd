@@ -4,6 +4,8 @@ extends Node3D
 @onready var material: StandardMaterial3D = meshInstance.mesh.surface_get_material(0)
 @export var highlight_material: StandardMaterial3D
 @onready var text: Sprite3D = $"../Sprite3D"
+@onready var fuelcan: Node3D = $"."
+@onready var ui_layer: CanvasLayer = $"../UiLayer"
 
 
 func add_highlight() -> void:
@@ -36,3 +38,4 @@ func _on_interactable_unfocused(interactor: Interactor) -> void:
 
 func _on_interactable_interacted(interactor: Interactor) -> void:
 	print("got fuel")
+	fuelcan.visible = false

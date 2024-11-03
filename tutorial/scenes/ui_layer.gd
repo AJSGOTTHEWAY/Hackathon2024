@@ -5,6 +5,10 @@ extends CanvasLayer
 @onready var panel: Panel = $"UI/Panel"
 @onready var ui: Control = $UI
 
+var gotFuel: bool = false
+var gotTools: bool = false
+var gotRadio: bool = false
+
 var talking: bool = false
 var dialogue_lines: Array = []  # Array to store dialogue lines
 var current_line: int = 0  # Track the current line index

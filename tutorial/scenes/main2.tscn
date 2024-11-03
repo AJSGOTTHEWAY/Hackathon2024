@@ -2,10 +2,10 @@
 
 [ext_resource type="Material" uid="uid://cohdb63xv3636" path="res://materials/wall_material.tres" id="1_jrlem"]
 [ext_resource type="Script" path="res://scripts/world/autohider.gd" id="2_b3ih5"]
-[ext_resource type="PackedScene" uid="uid://duvfb5n88riu2" path="res://assets/assets/models/wall_prefab.tscn" id="3_oxoam"]
+[ext_resource type="PackedScene" path="res://assets/assets/models/wall_prefab.tscn" id="3_oxoam"]
 [ext_resource type="Material" uid="uid://4caogu1ymomn" path="res://materials/rock.tres" id="4_myvam"]
 [ext_resource type="Material" uid="uid://7cmfm3gfgdew" path="res://materials/floor_material.tres" id="4_wh1xw"]
-[ext_resource type="Material" uid="uid://dhboo0a8bmjjr" path="res://materials/wall2.tres" id="5_ycdet"]
+[ext_resource type="Material" path="res://materials/wall2.tres" id="5_ycdet"]
 [ext_resource type="PackedScene" uid="uid://rqoknmxbsr8j" path="res://scenes/player/player.tscn" id="6_xv63y"]
 [ext_resource type="PackedScene" uid="uid://cpnbiuq4fb0e2" path="res://assets/assets/models/pickups/worn_jerrycan_glb.glb" id="7_5oaw7"]
 [ext_resource type="PackedScene" uid="uid://c57q15chwj64c" path="res://scenes/player/camera_rig.tscn" id="7_ndo5t"]
