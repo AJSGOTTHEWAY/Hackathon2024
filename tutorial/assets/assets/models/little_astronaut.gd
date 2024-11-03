@@ -4,10 +4,10 @@ extends Node3D
 @onready var meshInstance: MeshInstance3D = $Sketchfab_model/astronaut_fbx/Object_2/RootNode/Armature/Object_6/Skeleton3D/Object_9
 @onready var material: StandardMaterial3D = meshInstance.mesh.surface_get_material(0)
 @export var highlight_material: StandardMaterial3D
-@onready var text: Sprite3D = $"../Sprite3D"
 @onready var ui_layer: CanvasLayer = $"../UiLayer"
+@onready var text: Sprite3D = $astroLabel
 
-var part_count: int = 0  # Track the number of parts the player has found
+#var part_count: int = 0  # Track the number of parts the player has found
 
 # Different dialogue sequences based on part count
 var dialogues = [
@@ -49,8 +49,6 @@ func remove_highlight() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("focused", Callable(self, "_on_interactable_focused"))
-	connect("unfocused", Callable(self, "_on_interactable_unfocused"))
 	print("Script is attached and _ready() is running")
 	if animation_player.has_animation("Armature|Armature_001Action"):
 		animation_player.play("Armature|Armature_001Action")
@@ -72,11 +70,11 @@ func _on_interactable_interacted(interactor: Interactor) -> void:
 	print("Interacted by Player")
 	if !ui_layer.talking:
 		# Start the dialogue based on the current part count
-		ui_layer.start_dialogue(dialogues[part_count], "Cosmo")
+		ui_layer.start_dialogue(dialogues[ui_layer.partCount], "Cosmo")
 	else:
 		ui_layer.next_line()
 
-# Function to be called when the player finds a part
-func on_player_found_part() -> void:
-	if part_count < dialogues.size() - 1:
-		part_count += 1
+## Function to be called when the player finds a part
+#func on_player_found_part() -> void:
+	#if part_count < dialogues.size() - 1:
+		#part_count += 1

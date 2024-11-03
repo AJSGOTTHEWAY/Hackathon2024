@@ -4,18 +4,32 @@ extends CanvasLayer
 @onready var name_label: Label = $"UI/Panel/Name Label"
 @onready var panel: Panel = $"UI/Panel"
 @onready var ui: Control = $UI
-
-var gotFuel: bool = false
-var gotTools: bool = false
-var gotRadio: bool = false
+@onready var fuel_can: TextureRect = $"UI/Fuel Can"
+@onready var radio: TextureRect = $UI/Radio
+@onready var toolbox: TextureRect = $UI/Toolbox
 
 var talking: bool = false
 var dialogue_lines: Array = []  # Array to store dialogue lines
 var current_line: int = 0  # Track the current line index
+var partCount = 0
 
 func _ready() -> void:
 	ui.visible = true  # Initially hide the dialogue box
 	panel.visible = false
+	partCount = 0
+	
+
+func gotFuel() -> void:
+	fuel_can.visible = true
+	partCount+=1
+
+func gotTools() -> void:
+	toolbox.visible = true
+	partCount+=1
+
+func gotRadio() -> void:
+	radio.visible = true
+	partCount+=1
 
 # Function to start dialogue
 func start_dialogue(lines: Array, speaker_name: String = "") -> void:

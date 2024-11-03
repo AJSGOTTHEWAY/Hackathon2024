@@ -8,3 +8,4 @@ signal focused(interactor: Interactor)
 signal unfocused(interactor: Interactor)
 #Emitted when an Interactor interacts with me.
 signal interacted(interactor: Interactor)
+#Emitted when an Interactor finds a part.

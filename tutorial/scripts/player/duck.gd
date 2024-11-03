@@ -4,6 +4,10 @@ const SPEED = 3.0
 const SPRINT_SPEED = 12.0
 const JUMP_VELOCITY = 6.0
 
+var gotFuel: bool = false
+var gotRadio: bool = false
+var gotTools: bool = false
+
 var walking = false
 @onready var player: CharacterBody3D = $"."
 @onready var visuals: Node3D = $visuals

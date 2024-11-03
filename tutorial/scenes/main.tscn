@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dmxh43f6ekqve" path="res://hand raido_hand raido blend_Material_Metallic-hand raido blend_Material_Roughness.png" id="18_e6262"]
 [ext_resource type="Texture2D" uid="uid://die6wg04s7og4" path="res://hand raido_hand raido blend_Material_OpenGL_Normal.png" id="19_n3g8o"]
 [ext_resource type="Script" path="res://scenes/toolbox.gd" id="20_a3tmv"]
-[ext_resource type="Material" uid="uid://bohm14p5xenbj" path="res://materials/toolboxcover.tres" id="21_rmr5j"]
+[ext_resource type="Material" path="res://materials/toolboxcover.tres" id="21_rmr5j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kiy"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1396,7 +1396,7 @@ _data = {
 radius = 1.935
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_xf2em"]
-viewport_path = NodePath("Sprite3D/SubViewport")
+viewport_path = NodePath("little_astronaut/astroLabel/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhxdf"]
 resource_name = "Material"
@@ -1630,7 +1630,7 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 
 [node name="CameraRig" parent="." instance=ExtResource("4_1tr4h")]
 
-[node name="little_astronaut" type="Node3D" parent="."]
+[node name="little_astronaut" type="Node3D" parent="." groups=["cosmo"]]
 transform = Transform3D(0.648811, 0, 0.76095, 0, 1, 0, -0.76095, 0, 0.648811, -6.17607, 0.613667, 5.98395)
 script = ExtResource("6_531wq")
 highlight_material = ExtResource("7_f6i8e")
@@ -1928,18 +1928,18 @@ collision_mask = 1
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0.857752, 0)
 shape = SubResource("CylinderShape3D_rvjvs")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.948096, 0, -0.317983, 0, 1, 0, 0.317983, 0, 0.948096, -6.176, 2.02168, 5.984)
+[node name="astroLabel" type="Sprite3D" parent="little_astronaut" groups=["cosmo"]]
+transform = Transform3D(0.373166, 0, -0.927764, 0, 1, 0, 0.927764, 0, 0.373166, -0.0192804, 1.38311, -0.000818729)
 visible = false
 billboard = 1
 texture = SubResource("ViewportTexture_xf2em")
 
-[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+[node name="SubViewport" type="SubViewport" parent="little_astronaut/astroLabel"]
 transparent_bg = true
 size = Vector2i(333, 80)
 script = ExtResource("11_n70fr")
 
-[node name="Label" type="Label" parent="Sprite3D/SubViewport"]
+[node name="Label" type="Label" parent="little_astronaut/astroLabel/SubViewport"]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 20
@@ -1989,6 +1989,25 @@ script = ExtResource("14_tdm2f")
 transform = Transform3D(0.67676, 0, 0.736203, 0, 1, 0, -0.736203, 0, 0.67676, 0.026763, 0.241501, 0.0370417)
 shape = SubResource("BoxShape3D_hi1u3")
 
+[node name="Hover Label" type="Sprite3D" parent="fuelcan" groups=["cosmo"]]
+transform = Transform3D(0.373166, 0, -0.927764, 0, 1, 0, 0.927764, 0, 0.373166, -0.0192804, 1.38311, -0.000818729)
+visible = false
+billboard = 1
+texture = SubResource("ViewportTexture_xf2em")
+
+[node name="SubViewport" type="SubViewport" parent="fuelcan/Hover Label"]
+transparent_bg = true
+size = Vector2i(333, 80)
+script = ExtResource("11_n70fr")
+
+[node name="Label" type="Label" parent="fuelcan/Hover Label/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "				[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 3
+
 [node name="radio" type="Node3D" parent="."]
 script = ExtResource("15_c5g1b")
 highlight_material = ExtResource("7_f6i8e")
@@ -2013,6 +2032,25 @@ shape = SubResource("BoxShape3D_e1ihd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="radio/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.078186, 0.801766, -5.34426)
 shape = SubResource("BoxShape3D_wpsqp")
+
+[node name="Hover Label" type="Sprite3D" parent="radio" groups=["cosmo"]]
+transform = Transform3D(0.373166, 0, -0.927764, 0, 1, 0, 0.927764, 0, 0.373166, 0.078186, 1.66439, -5.34426)
+visible = false
+billboard = 1
+texture = SubResource("ViewportTexture_xf2em")
+
+[node name="SubViewport" type="SubViewport" parent="radio/Hover Label"]
+transparent_bg = true
+size = Vector2i(333, 80)
+script = ExtResource("11_n70fr")
+
+[node name="Label" type="Label" parent="radio/Hover Label/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "				[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 3
 
 [node name="toolbox" type="Node3D" parent="."]
 script = ExtResource("20_a3tmv")
@@ -2051,6 +2089,25 @@ script = ExtResource("14_tdm2f")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="toolbox/Interactable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45692, 0.53888, -5.15242)
 shape = SubResource("BoxShape3D_het5f")
+
+[node name="Hover Label" type="Sprite3D" parent="toolbox" groups=["cosmo"]]
+transform = Transform3D(0.373166, 0, -0.927764, 0, 1, 0, 0.927764, 0, 0.373166, -4.52054, 2.25608, -5.1654)
+visible = false
+billboard = 1
+texture = SubResource("ViewportTexture_xf2em")
+
+[node name="SubViewport" type="SubViewport" parent="toolbox/Hover Label"]
+transparent_bg = true
+size = Vector2i(333, 80)
+script = ExtResource("11_n70fr")
+
+[node name="Label" type="Label" parent="toolbox/Hover Label/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "				[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 3
 
 [connection signal="focused" from="little_astronaut/Interactable" to="little_astronaut" method="_on_interactable_focused"]
 [connection signal="interacted" from="little_astronaut/Interactable" to="little_astronaut" method="_on_interactable_interacted"]

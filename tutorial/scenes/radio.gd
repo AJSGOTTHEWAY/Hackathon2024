@@ -3,7 +3,12 @@ extends Node3D
 @onready var meshInstance: MeshInstance3D = $"hand raido/hand radio"
 @onready var material: StandardMaterial3D = meshInstance.mesh.surface_get_material(0)
 @export var highlight_material: StandardMaterial3D
-@onready var text: Sprite3D = $"../Sprite3D"
+@onready var text: Sprite3D = $"Hover Label"
+@onready var ui_layer: CanvasLayer = $"../UiLayer"
+@onready var collision_shape_3d: CollisionShape3D = $StaticBody3D/CollisionShape3D
+@onready var radio: Node3D = $"."
+@onready var interaction_shape_3d: CollisionShape3D = $"../radio/Interactable/CollisionShape3D"
+
 
 func add_highlight() -> void:
 	print("add_highlight called")  # Print to check if this function is called
@@ -35,3 +40,7 @@ func _on_interactable_unfocused(interactor: Interactor) -> void:
 
 func _on_interactable_interacted(interactor: Interactor) -> void:
 	print("got radio")
+	ui_layer.gotRadio()
+	radio.visible = false
+	collision_shape_3d.disabled = true
+	interaction_shape_3d.disabled = true
