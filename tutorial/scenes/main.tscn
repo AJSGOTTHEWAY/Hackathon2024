@@ -1574,7 +1574,7 @@ points = PackedVector3Array(-0.308103, -0.122669, -0.265837, -0.315539, -0.16025
 [sub_resource type="BoxShape3D" id="BoxShape3D_het5f"]
 size = Vector3(2.49609, 2.09558, 1.07178)
 
-[node name="world" type="Node3D"]
+[node name="world2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jrbqr")
