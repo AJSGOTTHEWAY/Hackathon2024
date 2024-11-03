@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c6dmvt23ayf14"]
+[gd_scene load_steps=20 format=3 uid="uid://c6dmvt23ayf14"]
 
 [ext_resource type="Material" uid="uid://cohdb63xv3636" path="res://materials/wall_material.tres" id="1_jrlem"]
 [ext_resource type="Script" path="res://scripts/world/autohider.gd" id="2_b3ih5"]
@@ -12,7 +12,10 @@
 [ext_resource type="Material" uid="uid://dmmcq26eqdrwy" path="res://materials/entrance.tres" id="8_805av"]
 [ext_resource type="AudioStream" uid="uid://bv2jryl0vok2t" path="res://assets/assets/music/Smooth Sailing.mp3" id="8_wyhif"]
 [ext_resource type="PackedScene" uid="uid://bj4x1okrcd8mh" path="res://assets/assets/models/pickups/hand-radio/source/hand raido.glb" id="8_yxmnl"]
+[ext_resource type="PackedScene" uid="uid://dnpf1pxhf0i7t" path="res://assets/assets/models/Space Rocket/Mesh/Rocket_2.fbx" id="9_q6lwd"]
 [ext_resource type="PackedScene" uid="uid://c13b7rvbehyug" path="res://assets/assets/models/pickups/helipad (1).glb" id="10_edgcl"]
+[ext_resource type="PackedScene" uid="uid://c6gtcsj451tf8" path="res://assets/assets/models/toolbox.glb" id="14_a6toj"]
+[ext_resource type="PackedScene" uid="uid://7lhjik088a7b" path="res://assets/assets/models/spaceassests2.0/FBX/ASTROIDS.fbx" id="15_kqo5i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kiy"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,28 +46,25 @@ directional_shadow_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21902, 1.9827, -14.5881)
 
 [node name="wall6" type="CSGBox3D" parent="map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.7719, 0.9827, -5.63299)
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 72.5039, 0.9827, 15.367)
 layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)
-script = ExtResource("2_b3ih5")
 
 [node name="wall7" type="CSGBox3D" parent="map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.7719, 1.9827, -5.63299)
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 70.7719, 1.9827, 14.367)
 layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)
-script = ExtResource("2_b3ih5")
 
 [node name="wall9" type="CSGBox3D" parent="map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.7719, 2.9827, -5.63299)
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 69.0398, 2.9827, 13.367)
 layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)
-script = ExtResource("2_b3ih5")
 
 [node name="Floor" type="CSGCylinder3D" parent="map"]
 transform = Transform3D(0.685159, 0, 0.305053, 0, 0.75, 0, -0.305053, 0, 0.685159, 0, 0, 0)
@@ -129,48 +129,6 @@ visible = false
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(1, 3, 110)
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.52182, 1.39887, 31.4261)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="map"]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -10.5279, 1.99887, 31.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-
-[node name="CSGSphere3D3" type="CSGSphere3D" parent="map"]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -14.5279, 2.99887, 31.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-
-[node name="CSGSphere3D4" type="CSGSphere3D" parent="map"]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -19.5279, 3.99887, 31.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-
-[node name="CSGSphere3D5" type="CSGSphere3D" parent="map"]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -19.5279, 4.99887, 34.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-
-[node name="CSGSphere3D6" type="CSGSphere3D" parent="map"]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -16.5279, 5.99887, 37.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
 
 [node name="wall19" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.114944, 0, 0.0030099, 0, 0.517424, 0, -0.0030099, 0, 0.114944, -7.92217, 2.71269, -13.0874)
@@ -301,22 +259,17 @@ script = ExtResource("2_b3ih5")
 [node name="worn_jerrycan_glb" parent="map/CollectableObject" instance=ExtResource("7_5oaw7")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.7458, 1.3, -56.8149)
 
+[node name="Rocket_2" parent="map" instance=ExtResource("9_q6lwd")]
+transform = Transform3D(-1.79036, 0, 6.76717, 0, 7, 0, -6.76717, 0, -1.79036, 69.5448, 7.78625, 6.63184)
+
 [node name="CollectableObject" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.03385)
 
 [node name="hand radio" parent="CollectableObject" instance=ExtResource("8_yxmnl")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.9597, 7.90647, 37.418)
-
-[node name="RotatingSphere" type="CSGSphere3D" parent="."]
-transform = Transform3D(0.999963, -0.00853456, 0, 0.00853455, 0.999964, 0, 0, 0, 1, -11.9888, 6.99887, 39.4249)
-material_override = ExtResource("4_myvam")
-use_collision = true
-radius = 1.0
-rings = 4
-smooth_faces = false
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.6145, 8.61781, 37.2472)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("10_edgcl")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 71.118, 2.12338, 3.92593)
+transform = Transform3D(4, 0, 0, 0, 6.65287, 0, 0, 0, 4, 70.9512, 0.478795, 3.96017)
 
 [node name="Player" parent="." instance=ExtResource("6_xv63y")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 74.6286, 4.56848, -0.319917)
@@ -328,3 +281,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 0, 0)
 stream = ExtResource("8_wyhif")
 volume_db = -5.766
 autoplay = true
+
+[node name="CollectableObject2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79493, 0.375, -1.90712)
+
+[node name="toolbox" parent="CollectableObject2" instance=ExtResource("14_a6toj")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.4, 17.2222)
+
+[node name="ASTROIDS" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -0.273402, 31)
+
+[node name="ASTROIDS2" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.81815, 2.76031, 31.5359)
+
+[node name="ASTROIDS3" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -14.0881, 3.71908, 31.5359)
+
+[node name="ASTROIDS4" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9897, 4.41882, 31.5359)
+
+[node name="ASTROIDS5" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4308, 6.23107, 37.0919)
+
+[node name="ASTROIDS7" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8905, 6.23107, 39.1668)
+
+[node name="ASTROIDS6" parent="." instance=ExtResource("15_kqo5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9897, 5.38329, 34.8468)
