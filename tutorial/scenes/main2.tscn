@@ -2412,7 +2412,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
 transform = Transform3D(100, 0, 0, 0, -1.62921e-05, 100, 0, -100, -1.62921e-05, 523.708, 47.5386, -1038.54)
 
 [node name="Box002_Material #32_0" type="MeshInstance3D" parent="toolbox/toolbodskethc/Sketchfab_model/0f8865732f954a6a88bd0e528192cd45_fbx/RootNode/Box002"]
-transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-14, 0, -7.10543e-14, 1, -4.33349, -8.03761, -0.144105)
+transform = Transform3D(0, -1, -1.62921e-07, 1, 0, -1.62921e-07, 1.62921e-07, -1.62921e-07, 1, -9.99034, -2.38076, -0.144104)
 mesh = SubResource("ArrayMesh_araw8")
 skeleton = NodePath("")
 
