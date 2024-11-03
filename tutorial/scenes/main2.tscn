@@ -1,11 +1,12 @@
 [gd_scene load_steps=20 format=3 uid="uid://c6dmvt23ayf14"]
 
+[ext_resource type="Material" uid="uid://cd3nc35d5un2v" path="res://materials/new_panorama_sky_material.tres" id="1_7i47m"]
 [ext_resource type="Material" uid="uid://cohdb63xv3636" path="res://materials/wall_material.tres" id="1_jrlem"]
 [ext_resource type="Script" path="res://scripts/world/autohider.gd" id="2_b3ih5"]
-[ext_resource type="PackedScene" path="res://assets/assets/models/wall_prefab.tscn" id="3_oxoam"]
+[ext_resource type="PackedScene" uid="uid://duvfb5n88riu2" path="res://assets/assets/models/wall_prefab.tscn" id="3_oxoam"]
 [ext_resource type="Material" uid="uid://4caogu1ymomn" path="res://materials/rock.tres" id="4_myvam"]
 [ext_resource type="Material" uid="uid://7cmfm3gfgdew" path="res://materials/floor_material.tres" id="4_wh1xw"]
-[ext_resource type="Material" path="res://materials/wall2.tres" id="5_ycdet"]
+[ext_resource type="Material" uid="uid://dhboo0a8bmjjr" path="res://materials/wall2.tres" id="5_ycdet"]
 [ext_resource type="PackedScene" uid="uid://rqoknmxbsr8j" path="res://scenes/player/player.tscn" id="6_xv63y"]
 [ext_resource type="PackedScene" uid="uid://cpnbiuq4fb0e2" path="res://assets/assets/models/pickups/worn_jerrycan_glb.glb" id="7_5oaw7"]
 [ext_resource type="PackedScene" uid="uid://c57q15chwj64c" path="res://scenes/player/camera_rig.tscn" id="7_ndo5t"]
@@ -17,12 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://c6gtcsj451tf8" path="res://assets/assets/models/toolbox.glb" id="14_a6toj"]
 [ext_resource type="PackedScene" uid="uid://7lhjik088a7b" path="res://assets/assets/models/spaceassests2.0/FBX/ASTROIDS.fbx" id="15_kqo5i"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kiy"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
 [sub_resource type="Sky" id="Sky_0i7rc"]
-sky_material = SubResource("ProceduralSkyMaterial_72kiy")
+sky_material = ExtResource("1_7i47m")
 
 [sub_resource type="Environment" id="Environment_jrbqr"]
 background_mode = 2
@@ -35,8 +32,9 @@ glow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jrbqr")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-0.35446, -0.384433, -0.85239, -0.812019, 0.578565, 0.076736, 0.463663, 0.719357, -0.517245, 641.178, 603.95, -691.294)
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.715906, 0.648127, 0.259636, 0.522011, 0.249915, 0.815504, 0.463663, 0.719357, -0.517245, 474, 499.723, -88.1953)
+light_color = Color(1, 0.959318, 0.997993, 1)
 light_energy = 10.0
 directional_shadow_mode = 1
 
@@ -47,21 +45,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21902, 1.9827, -14.5881)
 
 [node name="wall6" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 72.5039, 0.9827, 15.367)
-layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)
 
 [node name="wall7" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 70.7719, 1.9827, 14.367)
-layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)
 
 [node name="wall9" type="CSGBox3D" parent="map"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 69.0398, 2.9827, 13.367)
-layers = 2
 material_override = ExtResource("1_jrlem")
 use_collision = true
 size = Vector3(2, 1, 2)

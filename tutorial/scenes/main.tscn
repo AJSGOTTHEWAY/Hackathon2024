@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dmxh43f6ekqve" path="res://hand raido_hand raido blend_Material_Metallic-hand raido blend_Material_Roughness.png" id="18_e6262"]
 [ext_resource type="Texture2D" uid="uid://die6wg04s7og4" path="res://hand raido_hand raido blend_Material_OpenGL_Normal.png" id="19_n3g8o"]
 [ext_resource type="Script" path="res://scenes/toolbox.gd" id="20_a3tmv"]
-[ext_resource type="Material" path="res://materials/toolboxcover.tres" id="21_rmr5j"]
+[ext_resource type="Material" uid="uid://bohm14p5xenbj" path="res://materials/toolboxcover.tres" id="21_rmr5j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kiy"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
